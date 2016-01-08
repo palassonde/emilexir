@@ -10,6 +10,9 @@ Player = function (x, y, game, sm) {
 	this.body.collideWorldBounds = true;
 	this.body.checkCollision.up = false;
 
+	this.scale.setTo(0.5,0.5);
+	this.anchor.setTo(0.5);
+
 	this.cursors = this.game.input.keyboard.createCursorKeys();
 
 }
@@ -26,9 +29,13 @@ Player.prototype.move = function(){
 
 	if (this.cursors.left.isDown)
 	{
-		this.body.velocity.x -= 50;
+		this.body.velocity.x = -300;
+		this.scale.setTo(-0.5,0.5)
 	}else if (this.cursors.right.isDown)
 	{
-		this.body.velocity.x += 50;
+		this.scale.setTo(0.5,0.5)
+		this.body.velocity.x = 300;
+	}else{
+		this.body.velocity.x = 0;
 	}
 }
