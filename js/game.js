@@ -33,7 +33,6 @@ MyGame.Game.prototype = {
         key.scale.setTo(0.1, 0.1);
         key.anchor.set(0.5);
         key.inputEnabled = true;
-        key.events.onInputDown.add(listener, this);
 
 
     },
@@ -42,8 +41,5 @@ MyGame.Game.prototype = {
 
     },
 
-    listener : function() {
 
-        key.kill();
-    }
 }
