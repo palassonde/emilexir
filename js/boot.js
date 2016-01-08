@@ -23,7 +23,7 @@ MyGame.Boot.prototype = {
     },
 
     preload: function () {
-    	this.game.load.image("loading","assets/loading.png"); 
+    	this.game.load.image("loading","assets/images/loading.png"); 
     },
 
     create: function () {

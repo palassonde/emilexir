@@ -12,8 +12,7 @@ MyGame.Preloader.prototype = {
         this.loadingBar.anchor.setTo(0.5,0.5);
         this.load.setPreloadSprite(this.loadingBar, 0);
 
-        this.game.load.image("room","assets/images/room.jpg");
-        this.game.load.image("key","assets/images/key.jpg");
+        this.game.load.image("player","assets/images/player.png");
 
     },
 

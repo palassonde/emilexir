@@ -28,18 +28,16 @@ MyGame.Game.prototype = {
     create : function () {
 
         sm = new SoundManager(this.game);
-        room = this.game.add.sprite(0,0,'room');
-        key = this.game.add.sprite(500,500,'key');
-        key.scale.setTo(0.1, 0.1);
-        key.anchor.set(0.5);
-        key.inputEnabled = true;
-
+        this.game.stage.backgroundColor = '#6bb9f9';
+        player = new Player(500, 450, this.game, sm);
+        this.game.add.existing(player);
 
     },
 
     update : function () {
 
-    },
+        player.action();
+    }
 
 
 }
